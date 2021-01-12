@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>http://yoursite.com/2020/12/12/formik-yup-form/</loc>
+    
+    <lastmod>2021-01-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/06/23/RabbitMQ-Syslog-Cacti/</loc>
+    
+    <lastmod>2020-12-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2019/07/11/React-proxy/</loc>
+    
+    <lastmod>2020-12-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/06/20/Redux-performance/</loc>
+    
+    <lastmod>2020-12-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2019/06/05/antdesign_about/</loc>
+    
+    <lastmod>2020-12-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/06/19/cacti-syslog-docker/</loc>
+    
+    <lastmod>2020-12-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/02/26/dva-redux-saga/</loc>
+    
+    <lastmod>2020-12-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2019/08/20/dva-roadhog-babel/</loc>
+    
+    <lastmod>2020-12-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2019/08/01/react-virtualized-tree/</loc>
+    
+    <lastmod>2020-12-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/404.html</loc>
+    
+    <lastmod>2020-12-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/about/index.html</loc>
+    
+    <lastmod>2020-12-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/categories/index.html</loc>
+    
+    <lastmod>2020-12-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/tags/index.html</loc>
+    
+    <lastmod>2020-12-12</lastmod>
+    
+  </url>
+  
+
+  <url>
+    <loc>http://yoursite.com/</loc>
+    <lastmod>2021-01-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  
+  <url>
+    <loc>http://yoursite.com/tags/RabbitMQ/</loc>
+    <lastmod>2021-01-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/tags/ReactJS/</loc>
+    <lastmod>2021-01-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/tags/docker/</loc>
+    <lastmod>2021-01-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+
+  
+</urlset>
