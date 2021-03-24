@@ -4,11 +4,30 @@
   
     
     <entry>
+      <title>How-to-deploy</title>
+      <link href="/2021/01/12/how-to-deploy/"/>
+      <url>/2021/01/12/how-to-deploy/</url>
+      
+        <content type="html"><![CDATA[<p>我目前公司的開發流程有點類似於 GitFlow，並且使用 Jenkins 部屬，目前主要是由我來部屬上版，也因此我花了不少時間在研究以及了解部屬流程。</p><a id="more"></a><h2 id="介紹"><a href="#介紹" class="headerlink" title="介紹"></a>介紹</h2><p>按照慣例，詳細我都不多說。我目前公司的開發流程相較於 GitFlow 少了 release 階段。有 Alpha 測試，Beta 測試，Gamma 測試，三個測試跑完之後才會部屬上 Demo 和 Production。</p><ul><li>Alpha 測試使用 feature 分支，供前後端內部測試使用。測試完 merge 進去 develop。</li><li>Beta 測試使用 develop 分支，供 QA 和 PM 測試。測試完後 merge 進去 master。</li><li>Gamma 測試使用 hotfix 分支，供 QA 和 PM 測試。測試完後 merge 進去 develop 和 master。</li><li>Demo 和 Production 使用 master 分支，供正式使用。</li></ul><h2 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h2><p>目前公司的 Jenkins 部屬一次大概要花七至十分鐘。其中 Gamma 測試最麻煩，因為需要更新到兩個分支，而且還要確保正式環境不會有問題。</p><p>另外我們平常開發時通常使用 git pull –rebase，而在 merge 回其他分支時使用 git merge。rebase 的好處在於能夠消除不必要的合併提交，但是在像是 feature 分支 merge 進去 develop 時就不適合使用 rebase，因為會產生許多 conflict。</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> git </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>formik-yup-form</title>
       <link href="/2020/12/12/formik-yup-form/"/>
       <url>/2020/12/12/formik-yup-form/</url>
       
-        <content type="html"><![CDATA[<p>最近換公司，新公司需要實作許多表單供使用者填寫。React 表單的套件繁多，各有優缺，而我目前只有用過 Formik，故不做比較，只分享我目前的心得。</p><a id="more"></a><h2 id="介紹"><a href="#介紹" class="headerlink" title="介紹"></a>介紹</h2><p><a href="https://formik.org/" target="_blank" rel="noopener">Formik</a> 提供了兩種建立表單的方式，第一種是組件的方式，像是 <code>&lt;Field&gt;</code>，預設是<code>&lt;input&gt;</code>元件，又或是透過 <code>&lt;Field as=&quot;select&quot;&gt;</code> 則是<code>&lt;select&gt;</code>元件。而如果想要使用自己的組件則需要使用<code>&lt;Field component&gt;</code>。</p><p>不過因為我新公司已經有一套自己的組件使用了。所以是使用另一種透過 hook 以及 context 的方式，將 Formik 所需的方法以及變數拿來使用。Formik 提供了 <code>useFormikContext()</code> 的方式，取得我們所設定好的表單初始值和初始狀態，以及 Formik 原本就有的方法。</p><p>最後，錯誤驗證則是結合了 <a href="https://github.com/jquense/yup" target="_blank" rel="noopener">Yup</a> ，Yup 的錯誤規則蠻簡單上手的，而且還有支援正則。</p><h2 id="問題"><a href="#問題" class="headerlink" title="問題"></a>問題</h2><p>隨著單頁的 <code>input</code> 的數量增加，輸入的速度也會有所延遲。這是因為每個輸入都會觸發 <code>onChange</code> 進行驗證，最後的解決方法是在 <code>onBlur</code> 時才觸發驗證。</p>]]></content>
+        <content type="html"><![CDATA[<p>最近換公司，新公司需要實作許多表單供使用者填寫。React 表單的套件繁多，各有優缺，而我目前只有用過 Formik，故不做比較，只分享我目前的心得。</p><a id="more"></a><h2 id="介紹"><a href="#介紹" class="headerlink" title="介紹"></a>介紹</h2><p><a href="https://formik.org/" target="_blank" rel="noopener">Formik</a> 提供了兩種建立表單的方式，第一種是組件的方式，像是 <code>&lt;Field&gt;</code>，預設是<code>&lt;input&gt;</code>元件，又或是透過 <code>&lt;Field as=&quot;select&quot;&gt;</code> 則是<code>&lt;select&gt;</code>元件。而如果想要使用自己的組件則需要使用<code>&lt;Field component&gt;</code>。</p><p>不過因為我新公司已經有一套自己的組件使用了。所以是使用另一種透過 hook 以及 context 的方式，將 Formik 所需的方法以及變數拿來使用。Formik 提供了 <code>useFormikContext()</code> 的方式，取得我們所設定好的表單初始值和初始狀態，以及 Formik 原本就有的方法。</p><p>最後，錯誤驗證則是結合了 <a href="https://github.com/jquense/yup" target="_blank" rel="noopener">Yup</a> ，Yup 的錯誤規則蠻簡單上手的，而且還有支援正則。</p><h2 id="問題"><a href="#問題" class="headerlink" title="問題"></a>問題</h2><p>隨著單頁的 <code>input</code> 的數量增加，輸入的速度也會有所延遲。這是因為每個輸入都會觸發 <code>onChange</code> 進行驗證，最後的解決方法是改在 <code>onBlur</code> 時才觸發驗證。</p>]]></content>
       
       
       

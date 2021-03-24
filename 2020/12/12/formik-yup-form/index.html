@@ -28,7 +28,7 @@
 <meta property="og:site_name" content="chaoegg">
 <meta property="og:description" content="最近換公司，新公司需要實作許多表單供使用者填寫。React 表單的套件繁多，各有優缺，而我目前只有用過 Formik，故不做比較，只分享我目前的心得。">
 <meta property="og:locale" content="zh-tw">
-<meta property="og:updated_time" content="2021-01-12T13:48:42.610Z">
+<meta property="og:updated_time" content="2021-03-13T12:11:06.880Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="formik-yup-form">
 <meta name="twitter:description" content="最近換公司，新公司需要實作許多表單供使用者填寫。React 表單的套件繁多，各有優缺，而我目前只有用過 Formik，故不做比較，只分享我目前的心得。">
@@ -196,7 +196,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新於</span>
-                <time title="修改時間：2021-01-12 21:48:42" itemprop="dateModified" datetime="2021-01-12T21:48:42+08:00">2021-01-12</time>
+                <time title="修改時間：2021-03-13 20:11:06" itemprop="dateModified" datetime="2021-03-13T20:11:06+08:00">2021-03-13</time>
               </span>
 
           
@@ -216,7 +216,7 @@
 <h2 id="介紹"><a href="#介紹" class="headerlink" title="介紹"></a>介紹</h2><p><a href="https://formik.org/" target="_blank" rel="noopener">Formik</a> 提供了兩種建立表單的方式，第一種是組件的方式，像是 <code>&lt;Field&gt;</code>，預設是<code>&lt;input&gt;</code>元件，又或是透過 <code>&lt;Field as=&quot;select&quot;&gt;</code> 則是<code>&lt;select&gt;</code>元件。而如果想要使用自己的組件則需要使用<code>&lt;Field component&gt;</code>。</p>
 <p>不過因為我新公司已經有一套自己的組件使用了。所以是使用另一種透過 hook 以及 context 的方式，將 Formik 所需的方法以及變數拿來使用。Formik 提供了 <code>useFormikContext()</code> 的方式，取得我們所設定好的表單初始值和初始狀態，以及 Formik 原本就有的方法。</p>
 <p>最後，錯誤驗證則是結合了 <a href="https://github.com/jquense/yup" target="_blank" rel="noopener">Yup</a> ，Yup 的錯誤規則蠻簡單上手的，而且還有支援正則。</p>
-<h2 id="問題"><a href="#問題" class="headerlink" title="問題"></a>問題</h2><p>隨著單頁的 <code>input</code> 的數量增加，輸入的速度也會有所延遲。這是因為每個輸入都會觸發 <code>onChange</code> 進行驗證，最後的解決方法是在 <code>onBlur</code> 時才觸發驗證。</p>
+<h2 id="問題"><a href="#問題" class="headerlink" title="問題"></a>問題</h2><p>隨著單頁的 <code>input</code> 的數量增加，輸入的速度也會有所延遲。這是因為每個輸入都會觸發 <code>onChange</code> 進行驗證，最後的解決方法是改在 <code>onBlur</code> 時才觸發驗證。</p>
 
     </div>
 
@@ -238,7 +238,10 @@
     <a href="/2020/06/23/RabbitMQ-Syslog-Cacti/" rel="prev" title="RabbitMQ-Syslog-Cacti">
       <i class="fa fa-chevron-left"></i> RabbitMQ-Syslog-Cacti
     </a></div>
-      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2021/01/12/how-to-deploy/" rel="next" title="How-to-deploy">
+      How-to-deploy <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
       </footer>
     
@@ -311,14 +314,14 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">9</span>
+          <span class="site-state-item-count">10</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">標籤</span></a>
       </div>
   </nav>
