@@ -2,16 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://yoursite.com/2021/01/12/how-to-deploy/</loc>
+    <loc>http://yoursite.com/2020/12/12/formik-yup-form/</loc>
     
-    <lastmod>2021-04-14</lastmod>
+    <lastmod>2021-04-16</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/2020/12/12/formik-yup-form/</loc>
+    <loc>http://yoursite.com/2021/01/12/how-to-deploy/</loc>
     
-    <lastmod>2021-03-13</lastmod>
+    <lastmod>2021-04-16</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2021/04/15/travis/</loc>
+    
+    <lastmod>2021-04-16</lastmod>
     
   </url>
   
@@ -37,13 +44,6 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/2019/06/05/antdesign_about/</loc>
-    
-    <lastmod>2020-12-12</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://yoursite.com/2020/06/19/cacti-syslog-docker/</loc>
     
     <lastmod>2020-12-12</lastmod>
@@ -59,6 +59,13 @@
   
   <url>
     <loc>http://yoursite.com/2019/08/20/dva-roadhog-babel/</loc>
+    
+    <lastmod>2020-12-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2019/06/05/antdesign_about/</loc>
     
     <lastmod>2020-12-12</lastmod>
     
@@ -102,7 +109,7 @@
 
   <url>
     <loc>http://yoursite.com/</loc>
-    <lastmod>2021-04-14</lastmod>
+    <lastmod>2021-04-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -110,28 +117,28 @@
   
   <url>
     <loc>http://yoursite.com/tags/RabbitMQ/</loc>
-    <lastmod>2021-04-14</lastmod>
+    <lastmod>2021-04-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://yoursite.com/tags/ReactJS/</loc>
-    <lastmod>2021-04-14</lastmod>
+    <lastmod>2021-04-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://yoursite.com/tags/docker/</loc>
-    <lastmod>2021-04-14</lastmod>
+    <lastmod>2021-04-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://yoursite.com/tags/git/</loc>
-    <lastmod>2021-04-14</lastmod>
+    <lastmod>2021-04-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
