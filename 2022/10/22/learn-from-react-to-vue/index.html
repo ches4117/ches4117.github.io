@@ -29,7 +29,7 @@
 <meta property="og:description" content="我在今年初的時候從電商網站離職，目前公司是使用 Vue 開發內容管理系統(CMS)。雖然之前都聽過別人說學 React 後再學 Vue 很簡單，而且 Vue3 也蠻像 React 的。但是親身學習過後才知道，真的蠻簡單的(？)。">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2022-10-22T00:54:08.000Z">
-<meta property="article:modified_time" content="2022-10-22T02:07:37.490Z">
+<meta property="article:modified_time" content="2022-10-22T02:14:30.110Z">
 <meta property="article:author" content="ches4117">
 <meta property="article:tag" content="Vue">
 <meta name="twitter:card" content="summary">
@@ -191,7 +191,7 @@
               <span class="post-meta-item-text">發表於</span>
               
 
-              <time title="創建時間：2022-10-22 08:54:08 / 修改時間：10:07:37" itemprop="dateCreated datePublished" datetime="2022-10-22T08:54:08+08:00">2022-10-22</time>
+              <time title="創建時間：2022-10-22 08:54:08 / 修改時間：10:14:30" itemprop="dateCreated datePublished" datetime="2022-10-22T08:54:08+08:00">2022-10-22</time>
             </span>
 
           
@@ -209,11 +209,16 @@
 <span id="more"></span>
 
 <h2 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h2><ul>
-<li>事件綁定寫法不同，例如 Vue 使用 <code>v-bind:click</code>，而 React 使用 <code>onClick</code>。</li>
-<li>組件傳值的寫法蠻容易搞混的，個人會覺得 React 傳值時用 <code>&#123;&#125;</code>，比 Vue 傳值用 <code>:</code> 清楚。</li>
-<li>不能用陣列 <code>map</code> 的方式去產生組件，而要改用 <code>v-for</code>。Vue 就是要讓使用者始終在操作 HTML 元素，但是我一開始會困惑為什麼兩邊都可以渲染變數，而我想使用 <code>map</code> 渲染變數卻不行。</li>
-<li>好用又危險的 <code>v-model</code> ，與蠻多人討論過我們該在哪時候使用 <code>v-model</code>，目前聽過最極端案例是完全禁止使用 <code>v-model</code>，而我跟另一名友人的想法是認為可以適當應用。而關於怎樣才叫做適當應用，這我覺得就是軟體開發的最難以掌控的點了，所以也是能夠理解完全禁止的考量了。</li>
-<li><code>function</code> 傳遞時該使用 <code>emit</code> 還是 <code>props</code> ，React 可以把 <code>function</code> 四處傳，而 Vue 提供了兩種傳遞途徑，我與友人討論過是覺得 <code>function</code> 應該只用 <code>emit</code> 傳遞。</li>
+<li><p>事件綁定寫法不同，例如 Vue 使用 <code>v-bind:click</code>，而 React 使用 <code>onClick</code>。  </p>
+</li>
+<li><p>組件傳值的寫法蠻容易搞混的，個人會覺得 React 傳值時用 <code>&#123;&#125;</code>，比 Vue 傳值用 <code>:</code> 清楚。  </p>
+</li>
+<li><p>不能用陣列 <code>map</code> 的方式去產生組件，而要改用 <code>v-for</code>。<br>Vue 就是要讓使用者始終在操作 HTML 元素，但是我一開始會困惑為什麼兩邊都可以渲染變數，而我想使用 <code>map</code> 渲染變數卻不行。  </p>
+</li>
+<li><p>好用又危險的 <code>v-model</code> ，與蠻多人討論過我們該在哪時候使用 <code>v-model</code>。<br>目前聽過最極端案例是完全禁止使用 <code>v-model</code>，而我跟另一名友人的想法是認為可以適當應用。而關於怎樣才叫做適當應用，這我覺得就是軟體開發的最難以掌控的點了，所以也是能夠理解完全禁止的考量了。  </p>
+</li>
+<li><p><code>function</code> 傳遞時該使用 <code>emit</code> 還是 <code>props</code>。<br>React 可以把 <code>function</code> 四處傳，而 Vue 提供了兩種傳遞途徑，我與友人討論過是覺得 <code>function</code> 應該只用 <code>emit</code> 傳遞。</p>
+</li>
 </ul>
 <h2 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h2><p>我目前這間公司剛進去，隔天就用 Vue3 開發元件了，然後一個禮拜內就正式進行開發文章編輯器。<br>所以我被迫快速掌握 Vue3，但也因此我能夠確切體認到，兩者的轉換真的不用花太多時間。<br>當然，一開始寫的程式蠻多都沒利用到 Vue 的優點，更多只是當 React 寫。</p>
 
