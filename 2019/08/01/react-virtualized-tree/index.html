@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 3.8.0">
+<meta name="generator" content="Hexo 6.3.0">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
@@ -22,17 +22,17 @@
   </script>
 
   <meta name="description" content="由於需要使用 tree 展示大量數據，而 Ant Design 的 tree 在展示大量數據時，會導致畫面延遲，詳細重現以及解決方法可參考該篇。">
-<meta name="keywords" content="ReactJS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="react-virtualized-tree">
 <meta property="og:url" content="http://yoursite.com/2019/08/01/react-virtualized-tree/index.html">
 <meta property="og:site_name" content="chaoegg">
 <meta property="og:description" content="由於需要使用 tree 展示大量數據，而 Ant Design 的 tree 在展示大量數據時，會導致畫面延遲，詳細重現以及解決方法可參考該篇。">
-<meta property="og:locale" content="zh-tw">
-<meta property="og:updated_time" content="2020-12-12T13:03:12.040Z">
+<meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2019-08-01T15:44:29.000Z">
+<meta property="article:modified_time" content="2020-12-12T13:03:12.040Z">
+<meta property="article:author" content="ches4117">
+<meta property="article:tag" content="ReactJS">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="react-virtualized-tree">
-<meta name="twitter:description" content="由於需要使用 tree 展示大量數據，而 Ant Design 的 tree 在展示大量數據時，會導致畫面延遲，詳細重現以及解決方法可參考該篇。">
 
 <link rel="canonical" href="http://yoursite.com/2019/08/01/react-virtualized-tree/">
 
@@ -172,7 +172,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="ches4117">
-      <meta itemprop="description" content>
+      <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -211,18 +211,18 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>  由於需要使用 tree 展示大量數據，而 <a href="https://ant.design/docs/react/introduce-cn" target="_blank" rel="noopener">Ant Design</a> 的 tree 在展示大量數據時，會導致畫面延遲，詳細重現以及解決方法可參考<a href="https://blog.logrocket.com/rendering-large-lists-with-react-virtualized-82741907a6b3/" target="_blank" rel="noopener">該篇</a>。</p>
-<a id="more"></a>
+        <p>  由於需要使用 tree 展示大量數據，而 <a target="_blank" rel="noopener" href="https://ant.design/docs/react/introduce-cn">Ant Design</a> 的 tree 在展示大量數據時，會導致畫面延遲，詳細重現以及解決方法可參考<a target="_blank" rel="noopener" href="https://blog.logrocket.com/rendering-large-lists-with-react-virtualized-82741907a6b3/">該篇</a>。</p>
+<span id="more"></span>
 <h2 id="解決"><a href="#解決" class="headerlink" title="解決"></a>解決</h2><p>  我一開始是想使用 Tree 的節點，將一定數量的節點摺疊起來，需要時再展開。雖然這樣可以暫時解決問題，但是並不美觀，而且在大量展開節點時依舊會十分緩慢。因此我試了以下幾種套件。</p>
 <ol>
-<li><a href="https://github.com/venasolutions/react-lazy-paginated-tree" target="_blank" rel="noopener">react-lazy-paginated-tree</a></li>
-<li><a href="https://github.com/diogofcunha/react-virtualized-tree" target="_blank" rel="noopener">react-virtualized-tree</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/venasolutions/react-lazy-paginated-tree">react-lazy-paginated-tree</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/diogofcunha/react-virtualized-tree">react-virtualized-tree</a></li>
 </ol>
 <h2 id="react-lazy-paginated-tree"><a href="#react-lazy-paginated-tree" class="headerlink" title="react-lazy-paginated-tree"></a>react-lazy-paginated-tree</h2><p>  這個套件有點類似我一開始的作法，不過他有做 Lazy load 和 Pagination，而 Pagination 需要自己參考範例寫 Pagination function。</p>
 <p>  最後考量到在同時展開多個節點的情境下，應該還是會造成網頁緩慢，故最後沒有選擇使用該套件。</p>
 <p>  (P.S: 雖然我覺得可以透過限制使用者展開節點數量來避免這種狀況發生。)</p>
-<h2 id="react-virtualized-tree"><a href="#react-virtualized-tree" class="headerlink" title="react-virtualized-tree"></a>react-virtualized-tree</h2><p>  該套件主要依賴於 <a href="https://github.com/bvaughn/react-virtualized" target="_blank" rel="noopener">react-virtualized</a>，virtualized 的原理可以參考<a href="https://github.com/dwqs/blog/issues/70" target="_blank" rel="noopener">該篇</a>，在我的理解就是只渲染固定區域的元素，然後在該區域滾動時刷新該區域當前所顯示之元素。而我在 Antd 中引用該套件時，無法正常顯示 icon。</p>
-<p>  後來我把 <a href="https://www.npmjs.com/package/material-icons" target="_blank" rel="noopener">material-icons</a> 的字型檔加入後即可正常顯示。而在這之前，我嘗試將該套件 Icon 的事件，繼承到 Antd Icon 上面使用，但是一直無法成功，也因此只能使用該套件的預設的 Icon。</p>
+<h2 id="react-virtualized-tree"><a href="#react-virtualized-tree" class="headerlink" title="react-virtualized-tree"></a>react-virtualized-tree</h2><p>  該套件主要依賴於 <a target="_blank" rel="noopener" href="https://github.com/bvaughn/react-virtualized">react-virtualized</a>，virtualized 的原理可以參考<a target="_blank" rel="noopener" href="https://github.com/dwqs/blog/issues/70">該篇</a>，在我的理解就是只渲染固定區域的元素，然後在該區域滾動時刷新該區域當前所顯示之元素。而我在 Antd 中引用該套件時，無法正常顯示 icon。</p>
+<p>  後來我把 <a target="_blank" rel="noopener" href="https://www.npmjs.com/package/material-icons">material-icons</a> 的字型檔加入後即可正常顯示。而在這之前，我嘗試將該套件 Icon 的事件，繼承到 Antd Icon 上面使用，但是一直無法成功，也因此只能使用該套件的預設的 Icon。</p>
 <h2 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h2><p>  最後成功將原本 Antd tree 的組件替換為 react-virtualized-tree，不過相比起 Antd tree，react-virtualized-tree 有許多小細節需要修改。</p>
 
     </div>
@@ -307,7 +307,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#解決"><span class="nav-number">1.</span> <span class="nav-text">解決</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#react-lazy-paginated-tree"><span class="nav-number">2.</span> <span class="nav-text">react-lazy-paginated-tree</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#react-virtualized-tree"><span class="nav-number">3.</span> <span class="nav-text">react-virtualized-tree</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#心得"><span class="nav-number">4.</span> <span class="nav-text">心得</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%B1%BA"><span class="nav-number">1.</span> <span class="nav-text">解決</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#react-lazy-paginated-tree"><span class="nav-number">2.</span> <span class="nav-text">react-lazy-paginated-tree</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#react-virtualized-tree"><span class="nav-number">3.</span> <span class="nav-text">react-virtualized-tree</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BF%83%E5%BE%97"><span class="nav-number">4.</span> <span class="nav-text">心得</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -321,14 +321,14 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">10</span>
+          <span class="site-state-item-count">11</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-count">5</span>
         <span class="site-state-item-name">標籤</span></a>
       </div>
   </nav>
@@ -355,13 +355,13 @@
 <div class="copyright">
   
   &copy; 
-  <span itemprop="copyrightYear">2021</span>
+  <span itemprop="copyrightYear">2022</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">ches4117</span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 強力驅動
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 強力驅動
   </div>
 
         
@@ -381,9 +381,17 @@
   <script src="/lib/anime.min.js"></script>
   <script src="/lib/velocity/velocity.min.js"></script>
   <script src="/lib/velocity/velocity.ui.min.js"></script>
-<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
 <script src="/js/schemes/pisces.js"></script>
+
+
 <script src="/js/next-boot.js"></script>
+
 
 
 

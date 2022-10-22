@@ -21,19 +21,20 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="一個熱衷於追求新知識的網頁工程師，目前在 ReactJS 和 Ruby on Rails 較有經驗。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="關於我">
-<meta property="og:url" content="http://yoursite.com/about/index.html">
+  <meta name="description" content="我在今年初的時候從電商網站離職，目前公司是使用 Vue 開發內容管理系統(CMS)。雖然之前都聽過別人說學 React 後再學 Vue 很簡單，而且 Vue3 也蠻像 React 的。但是親身學習過後才知道，真的蠻簡單的(？)。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="learn-from-react-to-vue">
+<meta property="og:url" content="http://yoursite.com/2022/10/22/learn-from-react-to-vue/index.html">
 <meta property="og:site_name" content="chaoegg">
-<meta property="og:description" content="一個熱衷於追求新知識的網頁工程師，目前在 ReactJS 和 Ruby on Rails 較有經驗。">
+<meta property="og:description" content="我在今年初的時候從電商網站離職，目前公司是使用 Vue 開發內容管理系統(CMS)。雖然之前都聽過別人說學 React 後再學 Vue 很簡單，而且 Vue3 也蠻像 React 的。但是親身學習過後才知道，真的蠻簡單的(？)。">
 <meta property="og:locale" content="zh_TW">
-<meta property="article:published_time" content="2019-06-04T23:44:12.000Z">
-<meta property="article:modified_time" content="2020-12-12T13:03:12.040Z">
+<meta property="article:published_time" content="2022-10-22T00:54:08.000Z">
+<meta property="article:modified_time" content="2022-10-22T02:07:37.490Z">
 <meta property="article:author" content="ches4117">
+<meta property="article:tag" content="Vue">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://yoursite.com/about/">
+<link rel="canonical" href="http://yoursite.com/2022/10/22/learn-from-react-to-vue/">
 
 
 <script id="page-configurations">
@@ -41,13 +42,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-tw'
   };
 </script>
 
-  <title>關於我 | chaoegg
-</title>
+  <title>learn-from-react-to-vue | chaoegg</title>
   
 
 
@@ -159,44 +159,93 @@
       <div class="main-inner">
         <div class="content-wrap">
           
-  
-  
 
-          <div class="content page posts-expand">
+          <div class="content post posts-expand">
             
 
     
-    
-    
-    <div class="post-block" lang="zh-tw">
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-tw">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/10/22/learn-from-react-to-vue/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ches4117">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="chaoegg">
+    </span>
       <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          learn-from-react-to-vue
+        </h1>
 
-<h1 class="post-title" itemprop="name headline">關於我
-</h1>
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+              
 
-<div class="post-meta">
+              <time title="創建時間：2022-10-22 08:54:08 / 修改時間：10:07:37" itemprop="dateCreated datePublished" datetime="2022-10-22T08:54:08+08:00">2022-10-22</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>我在今年初的時候從電商網站離職，目前公司是使用 Vue 開發內容管理系統(CMS)。<br>雖然之前都聽過別人說學 React 後再學 Vue 很簡單，而且 Vue3 也蠻像 React 的。<br>但是親身學習過後才知道，真的蠻簡單的(？)。</p>
+<span id="more"></span>
+
+<h2 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h2><ul>
+<li>事件綁定寫法不同，例如 Vue 使用 <code>v-bind:click</code>，而 React 使用 <code>onClick</code>。</li>
+<li>組件傳值的寫法蠻容易搞混的，個人會覺得 React 傳值時用 <code>&#123;&#125;</code>，比 Vue 傳值用 <code>:</code> 清楚。</li>
+<li>不能用陣列 <code>map</code> 的方式去產生組件，而要改用 <code>v-for</code>。Vue 就是要讓使用者始終在操作 HTML 元素，但是我一開始會困惑為什麼兩邊都可以渲染變數，而我想使用 <code>map</code> 渲染變數卻不行。</li>
+<li>好用又危險的 <code>v-model</code> ，與蠻多人討論過我們該在哪時候使用 <code>v-model</code>，目前聽過最極端案例是完全禁止使用 <code>v-model</code>，而我跟另一名友人的想法是認為可以適當應用。而關於怎樣才叫做適當應用，這我覺得就是軟體開發的最難以掌控的點了，所以也是能夠理解完全禁止的考量了。</li>
+<li><code>function</code> 傳遞時該使用 <code>emit</code> 還是 <code>props</code> ，React 可以把 <code>function</code> 四處傳，而 Vue 提供了兩種傳遞途徑，我與友人討論過是覺得 <code>function</code> 應該只用 <code>emit</code> 傳遞。</li>
+</ul>
+<h2 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h2><p>我目前這間公司剛進去，隔天就用 Vue3 開發元件了，然後一個禮拜內就正式進行開發文章編輯器。<br>所以我被迫快速掌握 Vue3，但也因此我能夠確切體認到，兩者的轉換真的不用花太多時間。<br>當然，一開始寫的程式蠻多都沒利用到 Vue 的優點，更多只是當 React 寫。</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Vue/" rel="tag"># Vue</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/01/12/how-to-deploy/" rel="prev" title="How-to-deploy">
+      <i class="fa fa-chevron-left"></i> How-to-deploy
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
   
 
-</div>
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
-          <p>一個熱衷於追求新知識的網頁工程師，目前在 ReactJS 和 Ruby on Rails 較有經驗。</p>
-
-      </div>
-      
-      
-      
-    </div>
-    
-
-    
-    
-    
 
 
           </div>
@@ -247,6 +296,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BF%83%E5%BE%97"><span class="nav-number">1.</span> <span class="nav-text">心得</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B8%BD%E7%B5%90"><span class="nav-number">2.</span> <span class="nav-text">總結</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 

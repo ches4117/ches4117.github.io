@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 3.8.0">
+<meta name="generator" content="Hexo 6.3.0">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
@@ -22,17 +22,17 @@
   </script>
 
   <meta name="description" content="最近換公司，新公司需要實作許多表單供使用者填寫。React 表單的套件繁多，各有優缺，而我目前只有用過 Formik，故不做比較，只分享我目前的心得。">
-<meta name="keywords" content="ReactJS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="formik-yup-form">
 <meta property="og:url" content="http://yoursite.com/2020/12/12/formik-yup-form/index.html">
 <meta property="og:site_name" content="chaoegg">
 <meta property="og:description" content="最近換公司，新公司需要實作許多表單供使用者填寫。React 表單的套件繁多，各有優缺，而我目前只有用過 Formik，故不做比較，只分享我目前的心得。">
-<meta property="og:locale" content="zh-tw">
-<meta property="og:updated_time" content="2021-04-16T14:25:26.550Z">
+<meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2020-12-12T13:19:01.000Z">
+<meta property="article:modified_time" content="2021-04-16T14:25:26.550Z">
+<meta property="article:author" content="ches4117">
+<meta property="article:tag" content="ReactJS">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="formik-yup-form">
-<meta name="twitter:description" content="最近換公司，新公司需要實作許多表單供使用者填寫。React 表單的套件繁多，各有優缺，而我目前只有用過 Formik，故不做比較，只分享我目前的心得。">
 
 <link rel="canonical" href="http://yoursite.com/2020/12/12/formik-yup-form/">
 
@@ -172,7 +172,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="ches4117">
-      <meta itemprop="description" content>
+      <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -212,11 +212,11 @@
 
       
         <p>最近換公司，新公司需要實作許多表單供使用者填寫。React 表單的套件繁多，各有優缺，而我目前只有用過 Formik，故不做比較，只分享我目前的心得。</p>
-<a id="more"></a>
+<span id="more"></span>
 
-<h2 id="介紹"><a href="#介紹" class="headerlink" title="介紹"></a>介紹</h2><p><a href="https://formik.org/" target="_blank" rel="noopener">Formik</a> 提供了兩種建立表單的方式，第一種是組件的方式，像是 <code>&lt;Field&gt;</code>，預設是<code>&lt;input&gt;</code>元件，又或是透過 <code>&lt;Field as=&quot;select&quot;&gt;</code> 則是<code>&lt;select&gt;</code>元件。而如果想要使用自己的組件則需要使用<code>&lt;Field component&gt;</code>。</p>
+<h2 id="介紹"><a href="#介紹" class="headerlink" title="介紹"></a>介紹</h2><p><a target="_blank" rel="noopener" href="https://formik.org/">Formik</a> 提供了兩種建立表單的方式，第一種是組件的方式，像是 <code>&lt;Field&gt;</code>，預設是<code>&lt;input&gt;</code>元件，又或是透過 <code>&lt;Field as=&quot;select&quot;&gt;</code> 則是<code>&lt;select&gt;</code>元件。而如果想要使用自己的組件則需要使用<code>&lt;Field component&gt;</code>。</p>
 <p>不過因為我新公司已經有一套自己的組件使用了。所以是使用另一種透過 hook 以及 context 的方式，將 Formik 所需的方法以及變數拿來使用。Formik 提供了 <code>useFormikContext()</code> 的方式，取得我們所設定好的表單初始值和初始狀態，以及 Formik 原本就有的方法。</p>
-<p>最後，錯誤驗證則是結合了 <a href="https://github.com/jquense/yup" target="_blank" rel="noopener">Yup</a> ，Yup 的錯誤規則蠻簡單上手的，而且還有支援正則。</p>
+<p>最後，錯誤驗證則是結合了 <a target="_blank" rel="noopener" href="https://github.com/jquense/yup">Yup</a> ，Yup 的錯誤規則蠻簡單上手的，而且還有支援正則。</p>
 <h2 id="問題"><a href="#問題" class="headerlink" title="問題"></a>問題</h2><p>隨著單頁的 <code>input</code> 的數量增加，輸入的速度也會有所延遲。這是因為每個輸入都會觸發 <code>onChange</code> 進行驗證，最後的解決方法是改在 <code>onBlur</code> 時才觸發驗證。</p>
 
     </div>
@@ -301,7 +301,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#介紹"><span class="nav-number">1.</span> <span class="nav-text">介紹</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#問題"><span class="nav-number">2.</span> <span class="nav-text">問題</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%8B%E7%B4%B9"><span class="nav-number">1.</span> <span class="nav-text">介紹</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%95%8F%E9%A1%8C"><span class="nav-number">2.</span> <span class="nav-text">問題</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -315,14 +315,14 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">10</span>
+          <span class="site-state-item-count">11</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-count">5</span>
         <span class="site-state-item-name">標籤</span></a>
       </div>
   </nav>
@@ -349,13 +349,13 @@
 <div class="copyright">
   
   &copy; 
-  <span itemprop="copyrightYear">2021</span>
+  <span itemprop="copyrightYear">2022</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">ches4117</span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 強力驅動
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 強力驅動
   </div>
 
         
@@ -375,9 +375,17 @@
   <script src="/lib/anime.min.js"></script>
   <script src="/lib/velocity/velocity.min.js"></script>
   <script src="/lib/velocity/velocity.ui.min.js"></script>
-<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
 <script src="/js/schemes/pisces.js"></script>
+
+
 <script src="/js/next-boot.js"></script>
+
 
 
 
